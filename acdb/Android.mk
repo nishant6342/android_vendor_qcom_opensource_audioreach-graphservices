@@ -37,6 +37,10 @@ LOCAL_MODULE_OWNER := qti
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
 
+ifeq ($(SOONG_CONFIG_android_hardware_audio_run_64bit), true)
+LOCAL_MULTILIB := 64
+endif
+
 LOCAL_HEADER_LIBRARIES := \
     libcutils_headers \
     libutils_headers \
@@ -118,6 +122,10 @@ LOCAL_MODULE_OWNER := qti
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
 
+ifeq ($(SOONG_CONFIG_android_hardware_audio_run_64bit), true)
+LOCAL_MULTILIB := 64
+endif
+
 LOCAL_HEADER_LIBRARIES := \
     libcutils_headers \
     libutils_headers \
@@ -155,6 +163,10 @@ LOCAL_MODULE_OWNER := qti
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
 LOCAL_VENDOR_MODULE := true
+
+ifeq ($(SOONG_CONFIG_android_hardware_audio_run_64bit), true)
+LOCAL_MULTILIB := 64
+endif
 
 LOCAL_CPPFLAGS := $(ats-gateway-def) \
 	-DSOCK_PATH='"/vendor/app/GatewayServer/ATS_sockets"' \

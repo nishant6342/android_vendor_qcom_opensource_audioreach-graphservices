@@ -66,6 +66,10 @@ LOCAL_MODULE_OWNER := qti
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
 
+ifeq ($(SOONG_CONFIG_android_hardware_audio_run_64bit), true)
+LOCAL_MULTILIB := 64
+endif
+
 ifneq ($(strip $(AUDIO_FEATURE_OLD_ION_IMPL)), true)
         include $(LIBION_HEADER_PATH_WRAPPER)
         LOCAL_C_INCLUDES += $(LIBION_HEADER_PATHS)
