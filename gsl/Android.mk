@@ -26,7 +26,9 @@ LOCAL_SRC_FILES := src/gsl_main.c \
     src/gsl_msg_builder.c\
     src/gsl_global_persist_cal.c
 
-LOCAL_HEADER_LIBRARIES := libspf-headers
+LOCAL_HEADER_LIBRARIES := \
+    libarosal_headers \
+    libspf-headers
 LOCAL_SHARED_LIBRARIES := \
     liblx-osal\
     libar-acdb\

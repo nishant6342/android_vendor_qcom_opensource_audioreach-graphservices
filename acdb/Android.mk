@@ -42,6 +42,7 @@ LOCAL_MULTILIB := 64
 endif
 
 LOCAL_HEADER_LIBRARIES := \
+    libarosal_headers \
     libcutils_headers \
     libutils_headers \
     vendor_common_inc

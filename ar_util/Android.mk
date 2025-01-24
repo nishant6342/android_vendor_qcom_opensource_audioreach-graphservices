@@ -20,7 +20,9 @@ LOCAL_SHARED_LIBRARIES := \
     liblx-osal
 
 LOCAL_CFLAGS := -D_ANDROID_
-LOCAL_HEADER_LIBRARIES := libspf-headers
+LOCAL_HEADER_LIBRARIES := \
+    libarosal_headers \
+    libspf-headers
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/api \
                     $(LOCAL_PATH)/inc
 
@@ -48,6 +50,9 @@ LOCAL_SRC_FILES := \
     test/src/ar_test_string.c\
     test/src/ar_test_data_log.c \
     test/src/ar_test_log_pkt_op.c
+
+LOCAL_HEADER_LIBRARIES := \
+    libarosal_headers
 
 LOCAL_SHARED_LIBRARIES := \
     liblog \
