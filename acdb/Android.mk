@@ -41,6 +41,9 @@ ifeq ($(SOONG_CONFIG_android_hardware_audio_run_64bit), true)
 LOCAL_MULTILIB := 64
 endif
 
+LOCAL_CFLAGS += \
+    -Wno-address-of-packed-member
+
 LOCAL_HEADER_LIBRARIES := \
     libarosal_headers \
     libcutils_headers \
@@ -126,6 +129,9 @@ LOCAL_PROPRIETARY_MODULE := true
 ifeq ($(SOONG_CONFIG_android_hardware_audio_run_64bit), true)
 LOCAL_MULTILIB := 64
 endif
+
+LOCAL_CFLAGS += \
+    -Wno-address-of-packed-member
 
 LOCAL_HEADER_LIBRARIES := \
     libcutils_headers \
